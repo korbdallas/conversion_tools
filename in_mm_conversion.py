@@ -33,7 +33,7 @@ def in_mm():
         pass
      
     mm_conversion= (inches * 25.4)
-    print(inches, "inches is equal to", mm_conversion, "mm")
+    print(inches, "inches is equal to", round(mm_conversion, 3), "mm")
     quit()
     
 def mm_in():
@@ -51,26 +51,19 @@ def mm_in():
         pass
      
      in_conversion= (mm / 25.4)
-     print(mm, "mm is equal to", in_conversion, "inches")
+     print(mm, "mm is equal to", round(in_conversion, 2), "inches")
      quit()
     
 def select_conversion():
-      conversion_type=input("Select conversion type, 1) inches to mm 2) mm to inches \t")
-      try:  # checks if input is numeric
-         mm = int(conversion_type)
-      except:
-         print("Invalid response. \n")
-         pass
-         select_conversion()
-      if int(conversion_type) < 1:
-         print("Invalid response. \n")
-         select_conversion()
-      elif int(conversion_type) > 2:
-         print("Invalid response. \n")
-         select_conversion()
-      elif int(conversion_type) == 1:
-         in_mm()
-      else:
-         mm_in()
+    while True:
+        conversion_type = input("Select conversion type, 1) inches to mm 2) mm to inches \t")
+        if conversion_type == "1":
+            return in_mm()
+        elif conversion_type == "2":
+            return mm_in()
+        else:
+            print("Invalid response\n")
+            select_conversion()
+
 
 select_conversion()
