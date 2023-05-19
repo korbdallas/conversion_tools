@@ -29,12 +29,10 @@ def in_mm():
     if float(inches) < 0:
         print("Please enter values greater than 0. ")
         in_mm()
-    else:
-        pass
-     
-    mm_conversion= (inches * 25.4)
-    print(inches, "inches is equal to", round(mm_conversion, 3), "mm")
-    quit()
+    else:  
+        mm_conversion= (inches * 25.4)
+        print(inches, "inches is equal to", round(mm_conversion, 3), "mm")
+        quit()
     
 def mm_in():
      mm=input("Please specify mm in decimal to convert to inches \t")
@@ -48,11 +46,9 @@ def mm_in():
         print("Please enter values greater than 0. ")
         mm_in()
      else:
-        pass
-     
-     in_conversion= (mm / 25.4)
-     print(mm, "mm is equal to", round(in_conversion, 2), "inches")
-     quit()
+        in_conversion= (mm / 25.4)
+        print(mm, "mm is equal to", round(in_conversion, 2), "inches")
+        quit()
     
 def select_conversion():
     while True:
