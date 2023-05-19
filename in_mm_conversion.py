@@ -1,4 +1,12 @@
-# this tool is used to convert mm to inches or inches to mm
+###########################################################################
+## this tool is used to convert mm to inches or inches to mm
+##
+##       python dev_zero_client.py <server_ip> <port>
+##
+## Author: Michael Colombo
+## Date: 5/19/2023 
+##
+############################################################################
 
 #!/bin/env/python
 
@@ -26,7 +34,8 @@ def in_mm():
      
     mm_conversion= (inches * 25.4)
     print(inches, "inches is equal to", mm_conversion, "mm")
-
+    quit()
+    
 def mm_in():
      mm=input("Please specify mm in decimal to convert to inches \t")
      try:  # checks if input is numeric
@@ -43,7 +52,8 @@ def mm_in():
      
      in_conversion= (mm / 25.4)
      print(mm, "mm is equal to", in_conversion, "inches")
-
+     quit()
+    
 def select_conversion():
       conversion_type=input("Select conversion type, 1) inches to mm 2) mm to inches \t")
       try:  # checks if input is numeric
